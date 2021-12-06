@@ -5,7 +5,7 @@ project (ac
     VERSION 0.0.1
     LANGUAGES CXX)
 
-set (CMAKE_CXX_STANDARD 14)
+set (CMAKE_CXX_STANDARD 17)
 include_directories (include)
 
 include(FetchContent)
@@ -35,7 +35,7 @@ FetchContent_MakeAvailable(Eigen)
 add_executable (tests
     tests/00-apply.cpp
     tests/01-utility.cpp
-    tests/02-waveform.cpp)
+    tests/02-filesystem.cpp)
 
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 target_link_libraries(tests PRIVATE Eigen3::Eigen)
